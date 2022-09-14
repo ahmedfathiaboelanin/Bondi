@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white:white;
+  --green:#33D1B1;
+  --btnBg:#FF3150;
+  --yellow:#FFC400;
+  --bg:#19283f;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  background-color: var(--bg);
+  position: fixed;
+}
+nav .navbar-toggler {
+  color: var(--white);
+  border: 1px solid white;
+  font-size: 20px;
+  outline: none;
+}
+nav .navbar-toggler svg {
+  font-size: 20px;
+  color: var(--white);
+}
+nav .navbar-toggler:focus {
+  box-shadow: none;
+}
+nav .nav-item a {
+  color: var(--white);
+}
+nav .nav-item .active {
+  color: var(--green);
+  font-weight: 800;
+}
+nav .nav-item a:hover {
+  color: var(--green);
+}
+nav .search svg {
+  color: var(--green);
+  font-size: 18px;
+  border-left: 2px solid var(--green);
+  padding-left: 10px;
+}
+nav .search a {
+  padding: 10px 18px;
+  background-color: var(--btnBg);
+  color: var(--yellow);
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.landing {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  background-color: var(--bg);
+}
+.landing .content h1 {
+  color: var(--white);
+}
+.landing .content a {
+  padding: 10px 18px;
+  background-color: var(--btnBg);
+  color: var(--yellow);
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.sec2 {
+  padding: 50px 0px;
+}
+.sec2 .skill h3 {
+  color: var(--yellow);
+}
+.sec2 .skill .icon {
+  position: relative;
+  height: 200px;
+}
+.sec2 .skill .icon svg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sec2 .skill .icon .fa-1, .sec2 .skill .icon .fa-2, .sec2 .skill .icon .fa-3 {
+  font-size: 180px;
+  color: #EFF7FA;
+}
+.sec2 .skill .icon .fa-pencil, .sec2 .skill .icon .fa-tv, .sec2 .skill .icon .fa-plug {
+  font-size: 60px;
+  color: var(--green);
+}
+.sec2 .skill p {
+  text-align: center;
+}
+
+.title {
+  padding-bottom: 6px;
+  position: relative;
+}
+.title h2 {
+  line-height: 38.4px;
+}
+
+.title::after {
+  position: absolute;
+  width: 125px;
+  height: 2px;
+  background-color: var(--green);
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sec3 {
+  background-color: #EEF6F9;
+  padding: 50px 0px;
+}
+.sec3 .linkbar a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+}
+.sec3 .linkbar a:hover:not(.active) {
+  color: var(--btnBg);
+}
+.sec3 .linkbar .active {
+  background-color: #FF3150;
+  color: var(--yellow);
+  border-radius: 15px;
+}
+.sec3 .box {
+  background-color: var(--white);
+  position: relative;
+}
+.sec3 .box::after {
+  position: absolute;
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  background-color: rgba(51, 209, 177, 0.5254901961);
+}
+.sec3 .box:hover::after {
+  height: 100%;
+  content: attr(data-name);
+  transition: 0.5s;
+}
+.sec3 .btn {
+  background-color: var(--btnBg);
+  color: var(--yellow);
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+.sec4 {
+  padding: 50px 0px 0px;
+}
+.sec4 p {
+  margin-bottom: 50px;
+}
+.sec4 .text {
+  text-align: start;
+}
+.sec4 .text p {
+  margin-bottom: 20px;
+}
+.sec4 .text .btn {
+  background-color: var(--btnBg);
+  color: var(--yellow);
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+.sec5 {
+  background-color: #EEF6F9;
+  padding: 50px 0px 70px;
+}
+.sec5 .container h2 {
+  color: var(--yellow);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.sec5 .container .team h3 {
+  background-color: var(--green);
+}
+.sec5 .container .team img {
+  width: 100%;
+}
+
+.sec6 {
+  padding: 80px 0px;
+}
+
+.sec7 {
+  background-color: var(--bg);
+  padding: 50px 0px 70px;
+}
+.sec7 a {
+  background-color: var(--btnBg);
+  color: var(--yellow);
+  text-decoration: none;
+  border-radius: 20px;
+}
+.sec7 a:hover {
+  background-color: var(--btnBg);
+  color: var(--yellow);
+}
+
+.sec8 {
+  padding-bottom: 90px;
+}
+.sec8 .container img {
+  width: 100%;
+}
+.sec8 .container .blog {
+  text-align: start;
+}
+.sec8 a {
+  background-color: var(--btnBg);
+  color: var(--yellow);
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 20px;
+}
+.sec8 a:hover {
+  background-color: var(--btnBg);
+  color: var(--yellow);
+}
+
+.sec9 {
+  padding: 80px 0px;
+  background-color: var(--yellow);
+}
+.sec9 form input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  padding-left: 10px;
+  color: white;
+}
+.sec9 form ::-moz-placeholder {
+  color: var(--white);
+}
+.sec9 form :-ms-input-placeholder {
+  color: var(--white);
+}
+.sec9 form ::placeholder {
+  color: var(--white);
+}
+.sec9 form button {
+  margin-top: 20px;
+  color: var(--yellow);
+  background-color: var(--bg);
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 20px;
+  border: none;
+}
+
+footer {
+  background-color: var(--bg);
+  padding: 50px 0px 100px;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li p span {
+  color: var(--green);
+}
+footer ul li p .yellowSpan {
+  color: var(--yellow);
+}
+footer ul li .btn {
+  background-color: var(--btnBg);
+  color: var(--yellow);
+  text-decoration: none;
+  border-radius: 20px;
+  width: 100%;
+}
+footer ul li .btn:hover {
+  background-color: var(--btnBg);
+  color: var(--yellow);
+}/*# sourceMappingURL=style.css.map */
